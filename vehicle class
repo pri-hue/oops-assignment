@@ -1,0 +1,59 @@
+class Person:
+    def __init__(self):
+        self.name = ""
+        self.numvehicle = ""
+        self.vehicle1 = ""
+        self.vehicle2 = ""
+
+    def setpersondetails(self, newname, numVehicle, vehicle1, vehicle2):
+        self.name = newname
+        self.numVehicle = numVehicle
+        self.vehicle1 = vehicle1
+        self.vehicle2 = vehicle2
+
+    def getpersondetails(self):
+        print(self.name, "has", self.numVehicle, "vehicle one is",
+              self.vehicle1, "and another is", self.vehicle2)
+
+
+class vehicle:
+    def __init__(self):
+        self.fuel = ""
+        self.uses = ""
+        self.operation = ""
+
+
+class hondaAccordCar(vehicle):
+    def sethondaAccordCar(self, newfuel, uses, madeindia):
+        self.fuel = newfuel
+        self.uses = uses
+        self.operation = madeindia
+
+    def getHondaAccordCar(self):
+        print("Honda accord car run on fuel called", self.fuel)
+        print("Honda accord is", self.uses, "and", self.operation, "in India")
+
+
+class DucatiBike(vehicle):
+    def setDucatiBike(self, newFuel, uses, imported):
+        self.fuel = newFuel
+        self.uses = uses
+        self.operation = imported
+
+    def getDucatiBike(self):
+        print("Ducati run on fuel called", self.fuel)
+        print("Ducati is", self.uses, "and", self.operation, "vehicle")
+
+
+if __name__ == "__main__":
+    p = Person()
+    p.setpersondetails("Sourabh", "two", "honda accord car", "Ducati Bike")
+    p.getpersondetails()
+
+    h = hondaAccordCar()
+    h.sethondaAccordCar("diesel", "new", "made")
+    h.getHondaAccordCar()
+
+    d = DucatiBike()
+    d.setDucatiBike("petrol", "used", "imported")
+    d.getDucatiBike()
